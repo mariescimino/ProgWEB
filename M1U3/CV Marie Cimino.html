@@ -4,59 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Marie Cimino</title>
+    <link rel="stylesheet" href="CV Marie Cimino.css">
 </head>
 <body>
     <!--trabajo practico2 -->
     <h1>CV Marie Cimino</h1>
     <h2>Diseñadora Gráfica UX/UI</h2>
-    <img src="verde.jpg" alt="verde">
-    <h3>CABA, Argentina</h3>
+    <div class="center"> 
+        <img src="verde.jpg" alt="verde">
+    </div>
+   
+
+    <h3>CABA, Argentina
+    </h3>
     <h4>36 años</h4>
     <h5>Series que me gustan</h5>
-    <ul>
+    <ul
+    class="destacados2">
         <li>Breaking Bad</li>
         <li>Game of Thrones</li>
         <li>The Big Bang Theory</li>
     </ul>
     <h5>Películas que más me gustan</h5>
-        <ol>
+        <ol
+        class="destacados2">
             <li>Pulp Fiction</li>
             <li>El resplandor</li>
             <li>Juan de los Muertos</li>
         </ol>
         <h3>Portfolio</h3>
-        <p>Naci en Buenos Aires, Argentina, estudié y me gradué en la UBA de Diseñadora Gráfica y hace unos años me empece a capacitar en todo lo que es experiencia e interfaz de usuario. Aqui muestro mis trabajos realizados a lo largo de mi carrera como Diseñadora. <a href="https://www.behance.net/mariecimino" target="_blank">Portfolio</a></p>
+        <p 
+        class="destacados">
+            Naci en Buenos Aires, Argentina, estudié y me gradué en la UBA de Diseñadora Gráfica y hace unos años me empece a capacitar en todo lo que es experiencia e interfaz de usuario. Aqui muestro mis trabajos realizados a lo largo de mi carrera como Diseñadora. <a href="https://www.behance.net/mariecimino" target="_blank">Portfolio</a>
+        </p>
     <h4>Trabajos de patrones</h4>
-    <img src="Nueva carpeta/rojo.jpg" alt="rojo"> 
-    <img src="Nueva carpeta/azteca.jpg" alt="azteca">
+
+        <div class="contenedor">
+            <div class="item"><img src="Nueva carpeta/azteca.jpg" alt="azteca"></div>      
+            <div class="item"><img src="Nueva carpeta/rojo.jpg" alt="rojo"></div> 
+            <div class="item"><img src="Nueva carpeta/sushi1.jpg" alt="sushi1"></div>
+        </div>
+    
     <h4>Contacto</h4>
     <form action="" method="">
-        <p>
+        <p class="destacados3">
             <label for="nom">Nombre y Apellido</label>
             <input type="text" name="Nombre y Apellido">
         </p>
-        <p>
+        <p class="destacados3">
             <label for="nom">Email</label>
             <input type="text" name="Email">
         </p>
-        <p>
+        <p class="destacados3">
             <label for="nom">Telefono</label>
             <input type="number" name="Telefono">
         </p>
         <h5>Consulta por especificación</h5>
-        <p>
+        <p class="destacados3">
             <input type="checkbox" name="Tipo de Diseño[]" value="Gráfico" id="Gráfico">
             <label for="Gráfico">Diseño Gráfico</label>
         </p>
-        <p>
+        <p class="destacados3">
             <input type="checkbox" name="Tipo de Diseño[]" value="Branding" id="Branding">
             <label for="Branding">Branding</label>
         </p>
-        <p>
+        <p class="destacados3">
             <input type="checkbox" name="Tipo de Diseño[]" value="UX/UI" id="UX/UI">
             <label for="UX/UI">UX/UI</label>
         </p>
-        <p>
+        <p class="destacados3">
             <input type="submit" value="Enviar">
             <input type="reset" value="Borrar">
         </p>

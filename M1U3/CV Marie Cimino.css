@@ -1,0 +1,58 @@
+h1{color: blueviolet;
+text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+background-color: background: #00caff;
+background: linear-gradient(183deg,#00caff 0%, rgba(75,255,0,0.36) 50%);
+background: -webkit-linear-gradient(183deg,#00caff 0%, rgba(75,255,0,0.36) 50%);
+background: -moz-linear-gradient(183deg,#00caff 0%, rgba(75,255,0,0.36) 50%);;}
+h2{text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: gray; font-size: 20px;
+background-color: background: #00caff;
+background: linear-gradient(183deg,#00caff 0%, rgba(75,255,0,0.36) 50%);
+background: -webkit-linear-gradient(183deg,#00caff 0%, rgba(75,255,0,0.36) 50%);
+background: -moz-linear-gradient(183deg,#00caff 0%, rgba(75,255,0,0.36) 50%);}
+
+.center { display: flex;
+        justify-content: center;
+        align-items: center;}
+
+h3{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.destacados{
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+h4{font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+h5{ font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: grey;
+}
+
+.destacados2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.destacados3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+h6{ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: orange;
+}
+.contenedor{
+    background-color:grey;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
