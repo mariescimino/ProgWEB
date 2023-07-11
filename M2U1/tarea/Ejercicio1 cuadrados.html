@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>Ejercicio1 Cuadrados</Title>
+    <link rel="stylesheet" href="Ejercicio1 cuadrados.css">
+
+</head>
+<body>
+
+    <h1>Cuadrados</h1> 
+    <h2>Clikear en cualquier cuadrado</h2>
+
+    <p>
+        <button class="boton1 alternar1"></button>
+        <button class="boton2 alternar2"></button>
+        <button class="boton3 alternar3"></button> 
+    </p>
+    <script>
+        const alternar1= document.getElementsByClassName('alternar1')[0]
+
+        alternar1.addEventListener('click', function(e) {
+            e.currentTarget.classList.toggle('activo'); })
+
+        
+        const alternar2= document.getElementsByClassName('alternar2')[0]
+
+        alternar2.addEventListener('click', function(e) {
+            e.currentTarget.classList.toggle('activo'); })
+
+        const alternar3= document.getElementsByClassName('alternar3')[0]
+
+        alternar3.addEventListener('click', function(e) {
+            e.currentTarget.classList.toggle('activo'); })
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+h1{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkgrey;
+}
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: bisque;
+    }
+body { background-color: rgb(4, 4, 46);
+        display: flexbox;
+        flex-direction: row;
+}
+.boton1 { 
+    padding: 15px 20px;
+    background-color: rgb(7, 235, 178);
+    width: 150px; 
+    height: 150px;
+    cursor: pointer;
+    }
+.alternar1.activo {
+    background-color: rgb(235, 7, 113);
+}
+.boton2 {
+    padding: 15px 20px;
+    background-color: chocolate;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    }
+.alternar2.activo {
+        background-color: rgb(7, 11, 235);
+}
+.boton3 {
+    padding: 15px 20px;
+    background-color: chartreuse;
+    width: 150px;
+    height: 150px;  
+    cursor: pointer;  
+}
+.alternar3.activo {
+    background-color: rgb(163, 7, 235);
+}
