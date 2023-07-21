@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cambia fondo</title>
+</head>
+<body>
+    <h1>Colores complementarios</h1>
+
+    <h2> Clikear en un cuadrado</h2>
+
+    <div class="contenedor">
+        <div class="cuadrado amarillo" onclick="cambiarfondo( '#510487')"></div>
+        <div class="cuadrado azul" onclick="cambiarfondo( '#ff5100')"></div>
+        <div class="cuadrado rojo" onclick="cambiarfondo( 'green')"></div>
+        <button class="boton" onclick="refrescarpagina()"> Reset</button>  
+  
+    <style>
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contenedor {
+            display: flex;
+            padding: 70px 50px;
+            justify-content: space-evenly;
+
+        }
+
+        .cuadrado {
+            height: 150px;
+            width: 150px;
+            cursor: pointer;
+        }
+        .amarillo {
+            padding: 15px 20px;
+            background-color: yellow;
+
+        }
+        .azul {
+            padding: 15px 20px;
+            background-color: blue;
+        }
+        .rojo {
+            padding: 15px 20px;
+            background-color: red;
+        }
+        .boton {
+            background-color: rgb(255, 255, 255);
+            stroke: black;
+            width: 70px;
+            height: 30px;
+        }
+        </style>
+        <script>
+      
+        function cambiarfondo(color) {
+            document.querySelector('body').style.background = color;
+
+        }
+
+        function refrescarpagina(){
+            location.reload();
+        }
+        </script>
+
+
+</body>
+</html>
