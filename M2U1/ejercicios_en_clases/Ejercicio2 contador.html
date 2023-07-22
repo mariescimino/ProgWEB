@@ -7,18 +7,26 @@
 
     <body>
         <h1>Contador de caracteres</h1>
-       <div class="conteiner">
-            <div class="row mt-5">
-                <div class="col-lg-6">
-                    <textarea name="contador" id="contador" cols="50" rows="10">
-                    </textarea>
-                </div>
-                <div class="col-lg-6">
-                    <div id="textareaVista"></div>
-                </div>
-            </div>
-       </div>
+                <textarea id="texto" cols="50" rows="10"></textarea>
+                <div>Caracteres: <span id="contar"></span></div>
 
+        <style>
+            h1 {font-family: Arial, Helvetica, sans-serif;
+            color: coral;
+            font-size: large;
+            }
+
+        </style>   
+            
+        <script>
+            var texto = document.getElementById ('texto');
+            var contar = document.getElementById ('contar');
+
+            texto.addEventListener ('keyup', function() {
+                contar.innerText = texto.value.length;                
+            })
+
+       </script>
 
     </body>
 
