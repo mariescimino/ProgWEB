@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Ejercicio2 contador.css">
+        <title>Contador</title>
+
+    <body>
+        <h1>Contador de caracteres</h1>
+                <textarea id="texto" cols="50" rows="10"></textarea>
+                <div>Caracteres: <span id="contar"></span></div>
+
+        <style>
+            h1 {font-family: Arial, Helvetica, sans-serif;
+            color: coral;
+            font-size: large;
+            }
+
+        </style>   
+            
+        <script>
+            var texto = document.getElementById ('texto');
+            var contar = document.getElementById ('contar');
+
+            texto.addEventListener ('keyup', function() {
+                contar.innerText = texto.value.length;                
+            })
+
+       </script>
+
+    </body>
+
+
+
+    </head>
+</html>
