@@ -40,26 +40,26 @@
     </button>
 </div>
 <div class="row my-3">
-    <div id="novedades" class="col-md-3 offset-md-2 py-1">
+    <div id="novedades" class="col-md-5 offset-md-2 py-3">
         <h2>Nuevos productos</h2>
         <ul class="lista-novedades">
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
-                        src="images/novedades2.jpg">Yerbas</a></li>
-            <li><a href="#"><img src="images/novedades2.jpg">Infusiones</a></li>
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img
-                        src="images/novedades2.jpg">Mates</a></li>
-            <li><a href="#"><img src="images/novedades2.jpg">Accesorios</a></li>
+            {{#each novedades}}
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal{{id}}"><img
+                        src="images/novedades2.jpg">{{producto}}</a></li>
+            {{/each}}
         </ul>
     </div>
-    <div class="modal" tabindex="-1" id="exampleModal">
+    {{#each novedades}}
+    <div class="modal" tabindex="-1" id="exampleModal{{id}}">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Descuentos!</h5>
+                    <h5 class="modal-title">{{producto}}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-lebel="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Aprovecha el 2x1 en productos seleccionados</p>
+                    <h5>{{cantidad}}</h5>
+                    <h3>{{precio}}</h3>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Buscar</button>
@@ -68,28 +68,52 @@
             </div>
         </div>
     </div>
-    <div class="modal" tabindex="-1" id="exampleModal2">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Descuentos!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-lebel="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>20% de descuento en la segunda unidad</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Buscar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{/each}}
     <!--cierro productos-->
     <!--inicio columna testimonios-->
-    <div class="col-md-3 my-3">
-        <div class="rounded py-5 testimonios">
+    <div class="col-md-3 my-5" img src="/public/images/carousel.jpg" class="d-block w-100" alt=""   q>
+        <div class="rounded py-3 testimonios">
             <h2 class="text-center">Testimonios</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonio">
+                            <h5>Juan Perez</h5>
+                            <p>"Compre 2k de yerba por la mañana y a la tarde ya los tenia en casa listos para matear con los amigos."</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonio">
+                            <h5>Mamut</h5>
+                            <p>"La mochila matera con divisiones, se la banco toda el viaje."</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonio">
+                            <h5>Dante Benjamin</h5>
+                            <p>"Aproveche el 2x1 y quede bien con la flia!"</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -103,7 +127,10 @@
     </div>
     <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
         <h2>Nosotros</h 2>
-            <p>Un grupo de amigos que siempre nos juntamos a disfrutar de unos mates, y ahora es nuestro emprendimiento
+            <p>Un grupo de amigos que siempre nos juntamos a disfrutar de unos mates, y ahora es nuestro emprendimiento.
+                PEnsando siempre en darle calidad a nuestros productos. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Voluptatibus perferendis at suscipit, quae deserunt repudiandae doloremque libero
+                aliquam tempora iusto temporibus impedit, totam ad animi sint voluptas quo ducimus sunt.
             </p>
     </div>
 </div>

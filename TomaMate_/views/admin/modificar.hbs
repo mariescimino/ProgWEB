@@ -1,0 +1,26 @@
+<div class="container" style="margin: 100px auto">
+    <div class="row">
+        <div class="col-6 offset -3">
+            <h4>Modificar novedades</h4>
+            <form action="/admin/novedades/modificar" method="post">
+                <input type="hidden" value="{{novedad.id}}" name="id">
+                <div class="form-group">
+                    <label for="">Producto</label>
+                    <input type="text" class="form-control" name="producto" value="{{novedad.producto}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Cantidad</label>
+                    <textarea name="cantidad" class="form-control" >{{novedad.cantidad}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Precio</label>
+                    <textarea name="precio" class="form-control">{{novedad.precio}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
