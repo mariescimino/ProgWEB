@@ -1,21 +1,26 @@
 <div class="container" style="margin: 100px auto">
     <div class="row">
         <div class="col">
-            <p style="float:right">
+            <p style="float: right">
                 <span>Hola {{usuario}}!</span>
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesion <i
-                        class="fasfa-sign-out-alt"></i></a>
+                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión <i class="fasfa-sign-out-alt"></i></a>
             </p>
         </div>
     </div>
     {{!-- fin de la fila 1 --}}
     {{!-- inicio fila 2 --}}
     <div class="row">
-        <div class="col-7" style="margin-top: -9px;">
+        <div class="col-7" >
             <h2>Nuevos productos</h2>
         </div>
         <div class="col-2 text-right">
             <a href="/admin/novedades/agregar" class="btn btn-success"> <i class="fas fa-plus"></i>Nuevo</a>
+        </div>
+        <div class="col-3">
+            <form class="form-inline my-2 my-lg-0" action="admin/novedades" method="get">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q"{{#if q}} value="{{q}}" {{/if}}>
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+            </form>
         </div>
     </div>
     {{!-- fin fila 2 --}}
@@ -27,14 +32,21 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Producto</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col" class="text-right">Precio</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {{#if is_search}}
+                        {{#unless novedades.length}}
+                            No se encotraron resultados para "<strong>{{q}}</strong>"
+                        {{/unless}}
+                    {{/if}}
                     {{#each novedades}}
                     <tr>
                         <th scope="row">{{id}}</th>
                         <td>{{producto}}</td>
+                        <td>{{{imagen}}}</td>
                         <td class="text-right">
                         <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-pencil-alt"></i></a>
                         <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>

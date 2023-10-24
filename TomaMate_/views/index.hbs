@@ -44,8 +44,10 @@
         <h2>Nuevos productos</h2>
         <ul class="lista-novedades">
             {{#each novedades}}
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal{{id}}"><img
-                        src="images/novedades2.jpg">{{producto}}</a></li>
+            <li>
+                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal{{id}}"><img
+                        src="{{imagen}}" width="70">{{producto}}</a>
+            </li>
             {{/each}}
         </ul>
     </div>
@@ -58,7 +60,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-lebel="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5>{{cantidad}}</h5>
+                    <h5>{{cantidad}}</h5>                    
+                    <img src="{{imagen}}">
                     <h3>{{precio}}</h3>
                 </div>
                 <div class="modal-footer">
@@ -71,13 +74,13 @@
     {{/each}}
     <!--cierro productos-->
     <!--inicio columna testimonios-->
-    <div class="col-md-3 my-5" img src="/public/images/carousel.jpg" class="d-block w-100" alt=""   q>
+    <div class="col-md-3 my-5" img src="/public/images/carousel.jpg" class="d-block w-100" alt="" q>
         <div class="rounded py-3 testimonios">
             <h2 class="text-center">Testimonios</h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
@@ -87,7 +90,8 @@
                     <div class="carousel-item active">
                         <div class="testimonio">
                             <h5>Juan Perez</h5>
-                            <p>"Compre 2k de yerba por la mañana y a la tarde ya los tenia en casa listos para matear con los amigos."</p>
+                            <p>"Compre 2k de yerba por la mañana y a la tarde ya los tenia en casa listos para matear
+                                con los amigos."</p>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -152,7 +156,7 @@
             </div>
             <div class="col">
                 <div class="card my-3">
-                    <img src="images/nos3.jpg" class="card-img-top" alt="comunidad">
+                    <img src="images/Erica.jpg" class="card-img-top" alt="comunidad">
                     <div class="card-body">
                         <h5 class="card-title">Erica Acosta</h5>
                         <p class="card-text">"Compre burrito por temas de acidez, y me ayudo mucho"</p>
@@ -162,7 +166,7 @@
             </div>
             <div class="col">
                 <div class="card my-3">
-                    <img src="images/nos3.jpg" class="card-img-top" alt="comunidad">
+                    <img src="images/washin.jpg" class="card-img-top" alt="comunidad">
                     <div class="card-body">
                         <h5 class="card-title">Washington Gomez</h5>
                         <p class="card-text">"Dejo 5 estrellas una plataforma super fácil e intuitiva para usar"</p>
@@ -172,7 +176,7 @@
             </div>
             <div class="col">
                 <div class="card my-3">
-                    <img src="images/nos3.jpg" class="card-img-top" alt="comunidad">
+                    <img src="images/edison.jpg" class="card-img-top" alt="comunidad">
                     <div class="card-body">
                         <h5 class="card-title">Antonio Cavai</h5>
                         <p class="card-text">"La mochila mateica es muy práctica para las aventuras en la montaña"</p>
